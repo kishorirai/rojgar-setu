@@ -1,0 +1,222 @@
+@import 'tailwindcss';
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+/* Dialog component fixes */
+[data-radix-dialog-content] {
+  background-color: white !important;
+  color: black !important;
+}
+
+[data-radix-dialog-overlay] {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.bg-background {
+  background-color: white !important;
+}
+
+/* Fix for ticket creation dialog */
+[data-radix-dialog-content] input,
+[data-radix-dialog-content] textarea,
+[data-radix-dialog-content] select,
+[data-radix-dialog-content] button {
+  background-color: white;
+  border: 1px solid hsl(var(--border));
+}
+
+/* Make sure dialog form elements are styled correctly */
+[data-radix-dialog-content] input::placeholder,
+[data-radix-dialog-content] textarea::placeholder {
+  color: hsl(var(--muted-foreground));
+}
+
+/* Ensure dialog title and content are visible */
+[data-radix-dialog-title],
+[data-radix-dialog-description] {
+  color: black !important;
+}
+
+/* Fix for select dropdown in placement analysis page */
+[data-radix-popper] {
+  z-index: 1000 !important;
+  position: absolute !important;
+  left: auto !important;
+  right: 0 !important;
+  top: 100% !important;
+  margin-top: 5px !important;
+  width: auto !important;
+  min-width: 180px !important;
+  transform: none !important;
+}
+
+/* Ensure batch dropdown has correct styling */
+[data-radix-select-content] {
+  background-color: white !important;
+  color: black !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+  border: 1px solid #e5e7eb !important;
+  max-height: 300px !important;
+  overflow-y: auto !important;
+}
+
+/* Specific fix for Placement Analysis select dropdown */
+.flex.gap-3 .w-\[180px\] + [data-radix-popper] {
+  right: 0 !important;
+  left: auto !important;
+  transform: none !important;
+}
+
+/* Batch select dropdown override for placement analysis */
+div[style*="z-index: 1000"] {
+  right: 20px !important;
+  left: auto !important;
+  top: 120px !important;
+  margin-top: 0 !important;
+  position: fixed !important;
+  width: 180px !important;
+  max-width: 180px !important;
+  transform: none !important;
+}
+
+/* Notification and profile dropdown should have higher z-index than batch selector */
+[data-radix-popper-content-wrapper] {
+  z-index: 1500 !important; /* Higher than batch dropdown */
+}
+
+/* Notification and user profile specific selectors */
+.notification-dropdown,
+.profile-dropdown {
+  z-index: 1500 !important;
+}
+
+/* Override for select dropdown in placement analysis */
+[data-radix-select-content][data-side="bottom"] {
+  position: absolute !important;
+  top: 45px !important;
+  left: auto !important; 
+  right: 0 !important;
+  margin-top: 0 !important;
+  z-index: 1000 !important; /* Lower than notification/profile dropdowns */
+  background-color: white !important;
+  transform: translateY(0) !important;
+}
+
+/* Item-aligned dropdown positioning (for placement analysis) */
+[data-radix-select-content][data-position="item-aligned"] {
+  position: absolute !important;
+  top: calc(100% + 5px) !important;
+  transform: none !important;
+  margin-top: 4px !important;
+  z-index: 1000 !important; /* Lower than notification/profile dropdowns */
+}
+
+/* Specific override for placement analysis batch dropdown */
+.relative[style*="z-index: 100"] [data-radix-select-content] {
+  top: 100% !important;
+  margin-top: 5px !important;
+  width: 180px !important;
+  z-index: 1000 !important; /* Lower than notification/profile dropdowns */
+}
+
+/* Fix for batch dropdown visibility and prevent cut-off */
+[data-radix-select-viewport] {
+  background-color: white !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}

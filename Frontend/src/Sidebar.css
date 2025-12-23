@@ -1,0 +1,123 @@
+.sidebar {
+  width: 260px;
+  background: #2046c8;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  box-shadow: 2px 0 8px #0001;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar-title {
+  font-weight: 800;
+  font-size: 18px;
+  padding: 2rem 2rem 1rem 2rem;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+  max-width: 150px;
+}
+
+.sidebar-section-label {
+  color: #c7d2fe;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 0 2rem;
+  margin-top: 18px;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.sidebar-nav {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebar-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 2rem;
+  color: #c7d2fe;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  border-left: 4px solid transparent;
+  background: transparent;
+  margin-bottom: 2px;
+  cursor: pointer;
+  border-radius: 0 8px 8px 0;
+  transition: background 0.18s, border 0.18s, color 0.18s;
+  max-width: 220px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar-nav-item.active {
+  color: #fff;
+  font-weight: 700;
+  border-left: 4px solid #fff;
+  background: #1e40af;
+}
+
+.sidebar-nav-item:hover:not(.active) {
+  background: #233e8b;
+}
+
+.sidebar-nav-item .icon {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-nav-item .label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 160px;
+}
+
+.sidebar-user {
+  padding: 1.5rem 2rem;
+  border-top: 1px solid #3b82f6;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #2046c8;
+}
+
+.sidebar-user-initials {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: #fff;
+  color: #2046c8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.sidebar-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-user-info .name {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.sidebar-user-info .role {
+  font-size: 13px;
+  color: #c7d2fe;
+} 
