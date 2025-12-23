@@ -78,8 +78,10 @@ const allowedOrigins = [
   'https://www.rojgarsetu.org',
   'https://company.rojgarsetu.org',
   'https://payomatixpaymentgateway.onrender.com',
-  'https://rojgar-setu-2.onrender.com/' , // Add Render backend itself if needed
+  'https://rojgar-setu-2.onrender.com',
+  'https://rojgar-setu-theta.vercel.app', 
 ];
+
 
 if (process.env.REACT_URL) allowedOrigins.push(process.env.REACT_URL);
 app.use(cors({
