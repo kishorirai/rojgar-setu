@@ -40,7 +40,7 @@ const Sales = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const res = await axios.get("https://campusadmin.onrender.com/api/jobs/"); // Replace with your actual endpoint
+        const res = await axios.get("https://rojgar-setu-2.onrender.comapi/jobs/"); // Replace with your actual endpoint
         const dataFromAPI = res.data; // assuming it returns an array of jobs
 
         const formattedJobs: JobListing[] = dataFromAPI.map((job: any) => ({

@@ -138,7 +138,7 @@ const App = () => {
   //   const checkAuthStatus = async () => {
   //     try {
   //       // Make a request to a backend route that requires authentication
-  //       const res = await fetch('https://campusadmin.onrender.com/api/dashboard', {
+  //       const res = await fetch('https://rojgar-setu-2.onrender.comapi/dashboard', {
   //         credentials: 'include',
   //       });
   //       if (res.ok) {
@@ -172,7 +172,7 @@ const App = () => {
   // Handle logout
   // const handleLogout = async () => {
   //   try {
-  //     await fetch('https://campusadmin.onrender.com/api/auth/logout', {
+  //     await fetch('https://rojgar-setu-2.onrender.comapi/auth/logout', {
   //       method: 'POST',
   //       credentials: 'include',
   //     });

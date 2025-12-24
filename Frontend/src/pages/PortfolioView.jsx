@@ -41,7 +41,7 @@ const PortfolioView = () => {
 
   // Helper to get the correct image for both web and PDF
   const getProfileImgSrc = () => {
-    return `https://campusadmin.onrender.com/api/student/me/profile-pic?${Date.now()}`;
+    return `https://rojgar-setu-2.onrender.comapi/student/me/profile-pic?${Date.now()}`;
   };
 
   useEffect(() => {
@@ -62,7 +62,7 @@ const PortfolioView = () => {
     }
 
     // Fetch career objective from profile API
-    fetch('https://campusadmin.onrender.com/api/student/me', {
+    fetch('https://rojgar-setu-2.onrender.comapi/student/me', {
       method: 'GET',
       credentials: 'include',
       headers: { 'Content-Type': 'application/json' }
@@ -215,7 +215,7 @@ const PortfolioView = () => {
     }
     // Footer with logo and bold colored text
     html += `<div style='margin-top:24px;text-align:center;'>
-      <img src='https://campusadmin.onrender.com/assets/rojgarlogo.png' alt='Rojgar Setu Logo' style='height:28px;opacity:0.85;margin-bottom:4px;'/><br>
+      <img src='https://rojgar-setu-2.onrender.comassets/rojgarlogo.png' alt='Rojgar Setu Logo' style='height:28px;opacity:0.85;margin-bottom:4px;'/><br>
       <span style='font-size:1.05em;font-weight:bold;color:#6C2EB5;'>Powered by Rojgar Setu</span>
     </div>`;
     pdfDiv.innerHTML = html;

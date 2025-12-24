@@ -77,12 +77,12 @@ const PlacementAnalysis = () => {
       try {
         const [overviewRes, deptRes, salaryRes, trendRes, recruitersRes, monthRes] =
           await Promise.all([
-            axios.get("https://campusadmin.onrender.com/api/v1/placement/overview"),
-            axios.get("https://campusadmin.onrender.com/api/v1/placement/by-department"),
-            axios.get("https://campusadmin.onrender.com/api/v1/placement/salary-distribution"),
-            axios.get("https://campusadmin.onrender.com/api/v1/placement/trend"),
-            axios.get("https://campusadmin.onrender.com/api/v1/placement/top-recruiters"),
-            axios.get("https://campusadmin.onrender.com/api/v1/placement/offers-by-month"),
+            axios.get("https://rojgar-setu-2.onrender.comapi/v1/placement/overview"),
+            axios.get("https://rojgar-setu-2.onrender.comapi/v1/placement/by-department"),
+            axios.get("https://rojgar-setu-2.onrender.comapi/v1/placement/salary-distribution"),
+            axios.get("https://rojgar-setu-2.onrender.comapi/v1/placement/trend"),
+            axios.get("https://rojgar-setu-2.onrender.comapi/v1/placement/top-recruiters"),
+            axios.get("https://rojgar-setu-2.onrender.comapi/v1/placement/offers-by-month"),
           ]);
 
         setPlacementData({
