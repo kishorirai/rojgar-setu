@@ -53,7 +53,8 @@ app.use(cors({
       'https://www.rojgarsetu.org',
       'https://company.rojgarsetu.org',
       'https://payomatixpaymentgateway.onrender.com',
-      'https://rojgar-setu-2.onrender.com'
+      'https://rojgar-setu-2.onrender.com',
+      'https://rojgar-setu-git-main-kishorirais-projects.vercel.app'
     ];
 
     // ✅ allow ALL Vercel preview deployments
